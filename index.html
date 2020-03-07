@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Earthquake Searcher</title>
+    <link rel="icon" href="https://cdn.clipart.email/f8a5e01fa85c03c96ac3eda0ea4d7700_28-collection-of-earth-clipart-gif-high-quality-free-cliparts-_600-600.png">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="scripts.js"></script>
+    <!--  Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Google Maps API -->
+    <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKuHWh4AmeZln9iexPJ76u8d39-Ap2Uww&callback=initMap">
+    </script>
+    
+</head>
+  
+  <body>
+    <!-- Headers -->
+    <div class="main_body">
+    <div style="clear: both">
+        <h1 style="float: left">Earthquake Searcher</h1>
+        <h5 style="float: right" class="myName">by Luis Mario Trujillo</h5>
+    </div>
+    <!-- Search form -->
+    <form name="myForm" id="myForm" action="javascript:saveData();">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="City" name="city" id="city" required aria-describedby="button-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-success" type="submit" id="button-addon2">Search</button>
+        </div>
+      </div>
+    </form>
+    </div>    
+    <!-- Map -->
+    <div id="map"></div>  
+  </body>
+</html>
